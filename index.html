@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="Brendan's Homepage" content="The homepage for Brendan's personal website, with a focus on his career in CS and his resume">
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <title> Brendan's Website </title>
+        <link rel="icon" href="/content/images/Photo_of_me.png"> <!-- Adding favicon which is pic of me currently-->
+        <!-- demoing small amount of style, just borders for sections on homepage -->
+        <style> 
+            section {
+                border: 1px solid;
+                padding: 1.5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Homepage </h1>
+            <div id="intra-site-links">
+                <nav>
+                    <ul>
+                        <li> <a href="/personal_demos/index.html"> Personal Demos </a></li>
+                        <li> <a href="/experiments/index.html"> Experiments </a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="inter-site-links">
+            <nav>
+                <ul>
+                    <li> <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a></li>
+                    <li> <a href="https://github.com/Donttestturing"> My Github </a></li>
+                    <li> <a href="https://ucsd.edu/"> UCSD's Website </a></li>
+                </ul>
+            </nav>
+            </div>
+            <hr>
+        </header>
+
+        <main>
+            <div id="joke"> 
+                <details>
+                    <summary> What does the poet take for their depression? </summary> <!-- Open with a joke -->
+                    <em> Prose-ac </em>
+                </details>
+            </div>
+            <figure> 
+                <img src="/content/images/Photo_of_me.png" alt="Photo of Brendan Devlin from mid chest height and above">
+                <figcaption> Brendan Devlin </figcaption>
+            </figure>
+                
+            <section id="aab"> <!-- About me section with sub sections, aab is all about me -->
+                <h2> About me: </h2>
+                <section>
+                    <h3> Skills </h3>
+                    <table id="career-skills-goals"> <!-- Formatting for table will be much improved once we are able to add CSS -->
+                        <caption> <b> My career skills and goals: </b> </caption>
+                        <colgroup>
+                            <col span="5"> 
+                        </colgroup>
+                        <tr> 
+                            <th> Me </th>
+                            <th> Technical Skills </th>
+                            <th> Interpersonal Skills </th>
+                            <th> Goals </th>
+                            <th> Number of languages learned </th>
+                        </tr>
+                        <tr>
+                            <td> <img src="/content/images/Photo_of_me_small.png" alt="Smaller Photo of Brendan Devlin from mid chest height and above"> </td>
+                            <td> <strong> Java, C++, Python, Unix, JavaScript/HTML/CSS </strong> </td>
+                            <td> <strong> Thoughtful and kind communicator whose diligent digging never leaves his teammates in a hole. </strong> </td>
+                            <td> I hope to become a very competent and real full stack developer. </td>
+                            <td> 7 </td>
+                        </tr>
+
+
+                    </table>
+
+                    <br>
+                    <h3> <i> Philosophy </i> </h3>
+                    <p> These are my personal beliefs and reflect no companies I work for. </p>
+      
+                    <p> I believe that we all are <em>valuable</em>, that everything we do is <em>meaningful</em>, and that we are all part of the <em>immense cosmic casual web.</em> </p>
+                </section>
+
+                <section id="likes">
+                    <h3> Likes and Cool Stuff </h3>
+                    <p> I like and enjoy much of popular television and movies today. I am also a <em> voracious reader. </em> </p>
+                    <div>
+                        <p>My favorite novels are:</p>
+                        <ol> 
+                            <li> <i> Stranger in a Strange Land </i> </li>
+                            <li> <i> Ender's Game </i> </li>
+                            <li> <i> Dune </i> </li>
+                        </ol>
+                        <aside> Did you know that Dune is being made into a big budget Movie? </aside>
+                    </div>
+                    
+                    <p> Here are some short clips from my favorite show. All Rights to NBC Universal </p>
+                    <video width="400" height="320" controls> 
+                        <source src="/content/video/frasierIfitsAnyComfort.mp4" > 
+                        Your Browser doesn't support the video tag
+                    </video>
+                    <video width="400" height="320" controls> 
+                        <source src="/content/video/cheersRueTheDay.mp4" > 
+                        Your Browser doesn't support the video tag
+                    </video>
+
+                    <p> Here are some short audio clips from things I like. All Rights to Republic Records and Universal Music Group, NBC Universal, and The Walt Disney Company </p>
+                    <p> "For once in my Life" by Stevie Wonder,  Chris Pratt as Andy Dwyer in <i>Parks and Recreation</i>, and Charlie Day as Charlie Kelly in <i>It's Always Sunny in Philadelphia</i> </p> <br>
+                    <audio controls> 
+                        <source src="/content/audio/ForOnceInMyLifeHook.mp3" > 
+                        Your Browser doesn't support the audio tag
+                    </audio>
+                    <audio controls> 
+                        <source src="/content/audio/harmonies.mp3" > 
+                        Your Browser doesn't support the audio tag
+                    </audio>
+                    <audio controls> 
+                        <source src="/content/audio/helpMePlease.mp3" > 
+                        Your Browser doesn't support the audio tag
+                    </audio>
+                    <p> I think of the last audio clip often, whenever I am struggling! </p>
+                </section>
+
+                <section id="resume" >
+                    <h3> My Resume: </h3>
+                    <span>
+                        <picture id="my_resume">
+                            <img src="/content/images/Brendan_Devlins_Resume.png" alt="An image of Brendan Devlin's Resume, listing education, skills, and other pertinent details" loading="lazy">
+                        </picture>
+                    </span>
+                </section>
+
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <hr>
+            <br>
+            <form action="https://httpbin.org/post" method="post"> <!-- Using fake action page for unimplemented functionality-->
+                <p> <b> Please enter your email address and I will email you back! </b>  </p> 
+                <label for="email-form" > Enter your email address: </label>
+                <input type="email" id="email-form" name="email-form" required>
+                <button type="submit"> Submit Email </button>
+            </form>
+            <br>
+            <form action="https://httpbin.org/post" method="post">
+                <label for="animal-survey"> Enter your favorite animal! </label>
+                <select id="animal-survey" name="animal-survey">
+                    <optgroup label="Mammal">
+                    <option> Cow </option>
+                    <option> Dog </option>
+                    <option> Platypus </option>
+                    </optgroup>
+                    <optgroup label="Bird">
+                        <option> Parrot </option>
+                        <option> Hawk </option>
+                        <option> Raven </option>
+                    </optgroup>
+                    <optgroup label="Fish">
+                        <option> Parrotfish </option>
+                        <option> Guppy </option>
+                        <option> Blue Marlin </option>
+                    </optgroup>
+                </select>
+                <button type="submit">
+                    I choose you!
+                </button>
+            </form>
+            <br>
+            <form action="https://httpbin.org/post" method="post">
+                <fieldset name="plant-choice">                   
+                <legend> Choose your favorite plant!</legend>
+
+                
+                <label for="oak-tree-choice" > Oak Tree: </label>
+                <input type="radio" id="oak-tree-choice" name="plant-choice" value="Oak Tree">
+
+                <label for="sunflower-choice" > Sunflower: </label>
+                <input type="radio" id="sunflower-choice" name="plant-choice" value="Sunflower">
+
+                <label for="poppy-choice" > Poppy: </label>
+                <input type="radio" id="poppy-choice" name="plant-choice" value="Poppy">
+                </fieldset>
+                <button type="submit">
+                    I'll leaf you later!
+                </button>
+            </form>
+
+            <br>
+            <form action="https://httpbin.org/post" method="post">
+                <p> Choose your favorite brand of Ramen! </p>
+                <label for="ramen-choice">Choose a flavor:</label>
+                <input list="ramen-brands" id="ramen-choice" name="ramen-brands" required>
+
+                <datalist id="ramen-brands" >
+                    <option value="Shin">
+                    <option value="Marachan">
+                    <option value="Top Ramen">
+                    <option value="Samyang">
+                    <option value="Nissin">
+                    <option value="Neoguri">
+                </datalist>
+                <button type="submit">
+                    Chowtime!
+                </button>
+            </form>
+
+
+            <template>
+                <textarea>
+                    Personal message from Brendan will be here with full JS implementation
+                </textarea>
+            </template>
+
+            <br>
+            <!-- Use of template below, for future implementation with JS, want live reload of last updated time based on pushes to the repo -->
+            <template>
+                <p> Site last updated on: <time datetime="19:31"> 7:31 PM </time> </p>
+            </template>
+            
+        </footer>
+
+    </body>
+
+
+</html>

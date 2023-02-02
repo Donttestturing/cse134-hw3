@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <title> Personal Demos </title>
+        <link rel="icon" href="/content/images/Photo_of_me.png" > <!-- Adding favicon which is pic of me currently-->
+    </head>
+    <body>
+        <header>
+            <h1> Homepage </h1>
+            <div id="intra-site-links">
+                <nav>
+                    <ul>
+                        <li> <a href="/experiments/index.html"> Experiments </a></li>
+                        <li> <a href="/index.html"> Homepage </a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="inter-site-links">
+            <nav>
+                <ul>
+                    <li> <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a></li>
+                    <li> <a href="https://github.com/Donttestturing"> My Github </a></li>
+                    <li> <a href="https://ucsd.edu/"> UCSD's Website </a></li>
+                </ul>
+            </nav>
+            </div>
+            <hr>
+        </header>
+        <main>
+            <section>
+                <h3> Code snippet of inverting Burrows-Wheeler Transform </h3>
+                <p> This is my solution for a totally optional and ungraded challenge given in one of my CS classes. </p>
+                <pre> <code> 
+                    //given a BWTransform, invert to give orig string
+                    string invertBWT(const string & s){
+                        string strToReturn = "";
+                        vector&lt;int&gt; vecL2F = last2FirstHelper(s);
+                        vector&lt;BWTChar&gt; vecToSort, vec;
+                        int l2f;
+                        string str = s.substr(0);
+                        
+                        for(int i = 0; i &lt; s.size(); i++){	//add all letters in BWT given to each vector, one will get sorted and be the vec for the first column
+                            BWTChar bwtCh(str[i]);
+                            vecToSort.push_back(bwtCh);
+                            vec.push_back(bwtCh);
+                        }
+                        sort(vecToSort.begin(), vecToSort.end(), BWTCharCompare);
+                    
+                    //beginning inversion
+                        for(int i = 0; i &lt; vecL2F.size()-1; i++){		
+                            if(i == 0){
+                                l2f = vecL2F[i];
+                                strToReturn.insert(strToReturn.begin(), vecToSort[i].getChar());
+                                strToReturn.insert(strToReturn.begin(), vec[i].getChar());
+                            }else {
+                                l2f = vecL2F[l2f];
+                                strToReturn.insert(strToReturn.begin(), vecToSort[l2f].getChar());
+                            }
+                        }
+                        return strToReturn;
+                    } 
+                </code> </pre>
+                <p> Note that we first <code> push_back()</code> the chars in the string onto a vector, and then we need to sort it. This is a <em> vital step. </em> </p>
+
+            </section>
+
+            <!-- More to add here, if wanted -->
+            <section>
+                <h3> More to Add </h3>
+
+
+            </section>
+
+
+        </main>
+
+
+
+    </body>
+
+
+</html>

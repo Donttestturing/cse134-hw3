@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <title> Experiments </title>
+        <link rel="icon" href="/content/images/Photo_of_me.png" > <!-- Adding favicon which is pic of me currently-->
+    </head>
+
+    <body>
+        <header>
+            <h1> Homepage </h1>
+            <div id="intra-site-links">
+                <nav>
+                    <ul>
+                        <li> <a href="/personal_demos/index.html"> Personal Demos </a></li>
+                        <li> <a href="/index.html"> Homepage </a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="inter-site-links">
+            <nav>
+                <ul>
+                    <li> <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a></li>
+                    <li> <a href="https://github.com/Donttestturing"> My Github </a></li>
+                    <li> <a href="https://ucsd.edu/"> UCSD's Website </a></li>
+                </ul>
+            </nav>
+            </div>
+            <hr>
+        </header>
+        <main>
+            <section>
+                <h2> Experimenting with Iframes: </h2>
+                <p> Where in the world are you? </p>
+                <iframe title="GoogleIT" width="350" height="350" src="https://www.openstreetmap.org/export/embed.html"> </iframe>
+            </section>
+
+            <section>
+                <h2> Playing with canvas element, <strong> Note that the canvas element is not an a11y. </strong> </h2>
+                
+                <canvas width="100" height="100">
+                    Your Browser does not support canvas elements.
+                    <script>
+                        const canvas = document.querySelector('canvas');
+                        const ctx = canvas.getContext('2d');
+                        //drawing concentric circles
+                        ctx.fillStyle = 'white';
+                        ctx.beginPath();
+                        ctx.arc(20, 20, 35, 0, 2 * Math.PI);
+                        ctx.fill();
+                        
+                        ctx.fillStyle = 'red';
+                        ctx.beginPath();
+                        ctx.arc(20, 20, 20, 0, 2 * Math.PI);
+                        ctx.fill();
+
+                        ctx.fillStyle = 'white';
+                        ctx.beginPath();
+                        ctx.arc(20, 20, 5, 0, 2 * Math.PI);
+                        ctx.fill();
+
+                    </script>
+                  </canvas>
+            </section>
+
+            <section>
+                <h2> Experimenting with SVG: </h2>
+                <svg viewBox="0 0 10 10" preserveAspectRatio="xMidYMid slice" role="img">
+                    <title> Shape </title>
+                    <circle cx="1" cy="1" r=".2" style="fill"/>
+                    <rect x="1" y="1" width=".3" height=".5" style="fill" />
+                    <circle cx="1.3" cy="1" r=".2" style="fill"/>
+                  </svg>
+            </section>
+
+            <section>
+                <h2> Total Playground </h2>
+
+            <label for="play-text"> Play with the text area: </label>
+            <textarea id="play-text">
+                Write what you want here!
+
+            </textarea>
+
+                <pre>
+                                    ._ o o
+                                    \_`-)|_
+                                ,""       \ 
+                                ,"  ## |   ಠ ಠ. 
+                            ," ##   ,-\__    `.
+                        ,"       /     `--._;)
+                        ,"     ## /
+                    ,"   ##    /
+                    
+                    ～(つˆ0ˆ)つ｡☆
+                    
+                    (͡•_ ͡• )
+                    
+                    ಠ_ಠ
+                    
+                    ಥ_ಥ
+                    
+                    ʕ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ•̫͡•ʕ•̫͡•ʔ
+                    
+                    ಠᴗಠ
+                    
+                    ¯\_(ツ)_/¯
+                    
+                    ᕕ(ᐛ)ᕗ
+                    
+                    (☝︎ ՞ਊ ՞)☝︎
+                    
+                    ( ͡° ͜ʖ ͡°)
+                    
+                    ( ͡~ ͜ʖ ͡°)
+                    
+                    ʕ ͡° ʖ̯ ͡°ʔ
+                    
+                    (╯°□°）╯︵ ┻━┻
+                    
+                    (ノಠ益ಠ)ノ彡┻━┻
+                    
+                    ┬──┬◡ﾉ(° -°ﾉ)
+                    
+                    (☞ﾟヮﾟ)☞
+                    
+                    (ง’̀-‘́)ง
+                    
+                    ლ(ಠ益ಠლ)
+                    
+                    ༼ つ ◕_◕ ༽つ
+                    
+                    (⌐■_■)
+                    
+                    (´･ω･`)
+                    
+                    (っ˘ڡ˘ς)
+                    
+                    ƪ(˘⌣˘)ʃ
+                    
+                    /╲/\╭(ఠఠ益ఠఠ)╮/\╱\
+                    
+                    ( ˘ ³˘)
+                    
+                    (/¯ ಠ_ಠ)/¯
+                    
+                    ( ꈍᴗꈍ)
+                    
+                    (っ˘̩╭╮˘̩)っ
+                    
+                    (｡╯︵╰｡)
+                    
+                    (◕દ◕)
+                    
+                    ٩(｡•́‿•̀｡)۶
+                    
+                    (⁀ᗢ⁀)
+                    
+                    (≧ω≦)
+                    
+                    (´･ᴗ･ ` )
+                    
+                    (づ￣ ³￣)づ
+                    
+                    (ง ื▿ ื)ว
+                    
+                    („ಡωಡ„)
+                    
+                </pre>
+
+            </section>
+
+        </main>
+
+
+    </body>
+
+
+</html>
