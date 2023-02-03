@@ -9,16 +9,143 @@
         <link rel="icon" href="/content/images/Photo_of_me.png"> <!-- Adding favicon which is pic of me currently-->
         <!-- demoing small amount of style, just borders for sections on homepage -->
         <style> 
-            section {
-                border: 1px solid;
-                padding: 1.5px;
+            :root {
+                --color-primary: #ddcbee;
+                --color-secondary: #d1b8dd;
+                --color-ternary: #ede2f1;
+                --color-trim: #e0cc6f;
+                --color-text:#493652;
+
+                --border-radius: 2px solid;
+                --margin-size: 2vh;
+                --padding-size: 2%;
+
             }
+      
+            /* Responsive/Media Queries*/
+
+            .main{
+                float: left;
+                width: 60%;
+            }
+            .img{
+                float: left;
+                width: 20%;
+            }
+            @media screen and (max-width: 640px) {
+                *{
+                    background-color: white;
+                }
+                .main {
+                    width: 100%
+                }
+                .img {
+                    max-width: 100%;
+                }
+                
+            }
+            @media screen and (min-width: 641px) and (max-width: 1023px) {
+                *{
+                    background-color: rgb(218, 22, 22);
+                }
+                .main {
+                    width: 100%
+                }
+                .img {
+                    max-width: 100%;
+                }
+                
+            }
+
+
+            @font-face {
+                font-family: "myCustomFont";
+                src: url("LibreFranklin-VariableFont_wght.ttf");
+            }
+
+            *{
+                font-family: myCustomFont, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+                
+            }
+            html{
+                background-color: var(--color-ternary);
+            }
+
+            section {
+                margin-bottom: var(--margin-size);
+
+                border-radius: var(--border-radius);
+                border: 1px solid;
+                padding: var(--padding-size);
+                border-color: var(--color-trim);
+                display: flex;
+                flex-direction: column;
+                background-color: var(--color-primary);
+                border-style: ridge;
+            }
+            
+            header {
+                display: flex;
+                background-color: var(--color-secondary);
+                border-style: ridge;
+            }
+            footer {
+                display: inline-flex;
+                flex-direction: row;
+                background-color: var(--color-secondary);
+                border-style: ridge;
+            }
+            ul {
+                flex-wrap: wrap;
+                display: inline-flex;
+                flex-direction: row;
+            }
+            ul li {
+                margin-right: 10vw;
+            }
+            h2, p {
+                color: var(--color-text);
+                font-size: .9em;
+            }
+            h1 {
+                color: var(--color-trim);
+                margin-right: 10%;
+            }
+            section > h2 {
+                color: var(--color-trim);
+            } 
+            section > h3 {
+                color: var(--color-text);
+            } 
+            main {
+                border-color: var(--color-trim);
+                margin-bottom: var(--margin-size);
+                padding: var(--padding-size);
+                display: flex;
+                flex-direction: column;
+                
+                
+            }
+            #joke {
+                border-radius: var(--border-radius);
+                border-color: var(--color-trim);
+                justify-content: center;
+                
+            }
+            #openingJokePic{
+                border-radius: var(--border-radius);
+                border-color: var(--color-trim);
+
+            }
+
+
+
         </style>
     </head>
     <body>
         <header>
             <h1> Homepage </h1>
-            <div id="intra-site-links">
+            <div id="intra-site-links" >
                 <nav>
                     <ul>
                         <li> <a href="/personal_demos/index.html"> Personal Demos </a></li>
@@ -26,7 +153,7 @@
                     </ul>
                 </nav>
             </div>
-            <div id="inter-site-links">
+            <div id="inter-site-links" >
             <nav>
                 <ul>
                     <li> <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a></li>
@@ -35,20 +162,22 @@
                 </ul>
             </nav>
             </div>
-            <hr>
         </header>
 
         <main>
-            <div id="joke"> 
-                <details>
-                    <summary> What does the poet take for their depression? </summary> <!-- Open with a joke -->
+            <div> 
+                <details >
+                    <summary id="joke"> What does the poet take for their depression? </summary> <!-- Open with a joke -->
                     <em> Prose-ac </em>
                 </details>
             </div>
-            <figure> 
-                <img src="/content/images/Photo_of_me.png" alt="Photo of Brendan Devlin from mid chest height and above">
-                <figcaption> Brendan Devlin </figcaption>
-            </figure>
+            <div id="openingJokePic">
+                <figure> 
+                    <img src="/content/images/Photo_of_me.png" alt="Photo of Brendan Devlin from mid chest height and above">
+                    <figcaption> Brendan Devlin </figcaption>
+                </figure>
+            </div>
+
                 
             <section id="aab"> <!-- About me section with sub sections, aab is all about me -->
                 <h2> About me: </h2>
@@ -70,8 +199,8 @@
                             <td> <img src="/content/images/Photo_of_me_small.png" alt="Smaller Photo of Brendan Devlin from mid chest height and above"> </td>
                             <td> <strong> Java, C++, Python, Unix, JavaScript/HTML/CSS </strong> </td>
                             <td> <strong> Thoughtful and kind communicator whose diligent digging never leaves his teammates in a hole. </strong> </td>
-                            <td> I hope to become a very competent and real full stack developer. </td>
-                            <td> 7 </td>
+                            <td> <b> I hope to become a very competent and real full stack developer. </b> </td>
+                            <td> <b> 7 </b> </td>
                         </tr>
 
 
@@ -148,7 +277,7 @@
                 <input type="email" id="email-form" name="email-form" required>
                 <button type="submit"> Submit Email </button>
             </form>
-            <br>
+            
             <form action="https://httpbin.org/post" method="post">
                 <label for="animal-survey"> Enter your favorite animal! </label>
                 <select id="animal-survey" name="animal-survey">
