@@ -24,38 +24,25 @@
       
             /* Responsive/Media Queries*/
 
-            .main{
-                float: left;
-                width: 60%;
-            }
-            .img{
-                float: left;
-                width: 20%;
+   
+            img,
+            picture,
+            video, table {
+            max-width: 100%;
             }
             @media screen and (max-width: 640px) {
                 *{
-                    background-color: white;
-                }
-                .main {
-                    width: 100%
-                }
-                .img {
-                    max-width: 100%;
+                    background-color:var(--color-ternary);
                 }
                 
             }
             @media screen and (min-width: 641px) and (max-width: 1023px) {
                 *{
-                    background-color: rgb(218, 22, 22);
-                }
-                .main {
-                    width: 100%
-                }
-                .img {
-                    max-width: 100%;
+                    background-color: rgb(212, 197, 228);
                 }
                 
             }
+     
 
 
             @font-face {
@@ -109,7 +96,7 @@
             }
             h1 {
                 color: var(--color-trim);
-                margin-right: 50%;
+                margin-right: 3%;
    
 
             }
@@ -154,6 +141,12 @@
                 background-color: var(--color-ternary);
             }
 
+            figure{
+                width: 100%;
+            }
+            .centerStage{
+                width:100%
+            }
 
         </style>
     </head>
@@ -180,8 +173,8 @@
         </header>
 
         <main>
-            <div> 
-                <details >
+            <div class="centerStage"> 
+                <details>
                     <summary id="joke"> What does the poet take for their depression? </summary> <!-- Open with a joke -->
                     <em> Prose-ac </em>
                 </details>
