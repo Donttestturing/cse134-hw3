@@ -24,26 +24,7 @@
             }
       
             /* Responsive/Media Queries*/
-
    
-            img,
-            picture,
-            video, table {
-            max-width: 100%;
-            }
-            @media screen and (max-width: 640px) {
-                *{
-                    background-color:var(--color-ternary);
-                }
-                
-            }
-            @media screen and (min-width: 641px) and (max-width: 1023px) {
-                *{
-                    background-color: rgb(212, 197, 228);
-                }
-                
-            }
-     
 
 
             @font-face {
@@ -51,7 +32,7 @@
                 src: url("LibreFranklin-VariableFont_wght.ttf");
             }
 
-            *{
+            * {
                 font-family: myCustomFont, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
                 
             }
@@ -73,7 +54,8 @@
             }
             
             header {
-                display: flex;
+                padding: 1.5rem;
+                text-align: center;
                 background-color: var(--color-secondary);
                 border-style: ridge;
             }
@@ -117,8 +99,7 @@
                 border-color: var(--color-trim);
                 margin-bottom: var(--margin-size);
                 padding: var(--padding-size);
-                display: flex;
-                flex-direction: column;
+                display: grid;
                 
                 
             }
@@ -145,32 +126,47 @@
                 border-style: solid;
                 background-color: var(--color-ternary);
             }
+
+            #site-links{
+                
+            }
+            nav {
+                display: flex;
+                justify-content: space-evenly;
+            }
        
 
+
+            img,
+            picture,
+            video, table {
+            max-width: 100%;
+            }
+            
+            @media screen and (max-width: 640px) {
+                *{
+                    background-color:var(--color-ternary);
+                }
+                
+            }
+            @media screen and (min-width: 641px) and (max-width: 1023px) {
+                *{
+                    background-color: rgb(212, 197, 228);
+                }
+            }
         </style>
     </head>
     <body>
         <header>
-            <h1> Homepage </h1>
-            <div id="intra-site-links" >
-                <nav>
-                    <ul>
-                        <li> <a href="/personal_demos/index.html"> Personal Demos </a></li>
-                        <li> <a href="/experiments/index.html"> Experiments </a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="inter-site-links" >
-            <nav>
-                <ul>
-                    <li> <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a></li>
-                    <li> <a href="https://github.com/Donttestturing"> My Github </a></li>
-                    <li> <a href="https://ucsd.edu/"> UCSD's Website </a></li>
-                </ul>
+             <!-- Fix these for all pages -->
+            <nav id="site-links">
+                <a href="/personal_demos/index.html"> Personal Demos </a>
+                <a href="/experiments/index.html"> Experiments </a>
+                <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a>
+                <a href="https://github.com/Donttestturing"> My Github </a>
+                <a href="https://ucsd.edu/"> UCSD's Website </a>
             </nav>
-            </div>
         </header>
-
         <main>
             <div class="centerStage"> 
                 <details id="joke">
