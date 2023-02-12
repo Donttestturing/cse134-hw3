@@ -5,29 +5,65 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" >
         <title> Experiments </title>
-        <link rel="icon" href="/content/images/Photo_of_me.png" > <!-- Adding favicon which is pic of me currently-->
-    </head>
+        <link rel="icon" href="/content/images/logoSmall.svg" alt="Brendan Devlin's personal logo, designed and created by him."> <!-- Adding favicon which my own logo-->
+        <style>
+            :root {
+                --color-primary: #ddcbee;
+                --color-secondary: #d1b8dd;
+                --color-ternary: #ede2f1;
+                --color-trim: #e0cc6f;
+                --color-dark-trim: #a09048;
+                --color-text:#493652;
 
+                --border-radius: 2px solid;
+                --margin-size: 2vh;
+                --padding-size: 2%;
+
+            }
+            @font-face {
+                font-family: "myCustomFont";
+                src: url("LibreFranklin-VariableFont_wght.ttf");
+            }
+            header {
+                display: flex;
+                padding: 1.5rem;
+               
+                background-color: var(--color-secondary);
+                border-style: ridge;
+            }
+            * {
+                font-family: myCustomFont, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;   
+            }
+            html{
+                background-color: var(--color-ternary);
+            }
+            #iconFig{
+                width: 15vw;
+            }
+            #site-links {
+                display: flex;
+                justify-content: space-around; 
+                gap: 8vw;
+                height: 2vh;
+
+            }
+            #site-links * {
+                height: 2vh;
+                border: blue solid 1px;
+            }
+
+        </style>
+    </head>
     <body>
         <header>
-            <h1> Homepage </h1>
-            <div id="intra-site-links">
-                <nav>
-                    <ul>
-                        <li> <a href="/personal_demos/index.html"> Personal Demos </a></li>
-                        <li> <a href="/index.html"> Homepage </a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="inter-site-links">
-            <nav>
-                <ul>
-                    <li> <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a></li>
-                    <li> <a href="https://github.com/Donttestturing"> My Github </a></li>
-                    <li> <a href="https://ucsd.edu/"> UCSD's Website </a></li>
-                </ul>
+            <h1> Experiments </h1>
+            <nav id="site-links">
+                <a href="/personal_demos/index.html"> Personal Demos </a>
+                <a href="/index.html"> Homepage </a>
+                <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a>
+                <a href="https://github.com/Donttestturing"> My Github </a>
+                <a href="https://ucsd.edu/"> UCSD's Website </a>
             </nav>
-            </div>
             <hr>
         </header>
         <main>

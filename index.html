@@ -17,12 +17,11 @@
                 --color-dark-trim: #a09048;
                 --color-text:#493652;
 
-                --border-radius: 2px solid;
+                --border-radius: 10px;
                 --margin-size: 2vh;
                 --padding-size: 2%;
 
             }
-
 
             @font-face {
                 font-family: "myCustomFont";
@@ -30,8 +29,7 @@
             }
 
             * {
-                font-family: myCustomFont, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-                
+                font-family: myCustomFont, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;   
             }
             html{
                 background-color: var(--color-ternary);
@@ -41,35 +39,31 @@
                 margin-bottom: var(--margin-size);
 
                 border-radius: var(--border-radius);
-                border: 1px solid;
                 padding: var(--padding-size);
                 border-color: var(--color-ternary);
                 display: flex;
                 flex-direction: column;
                 background-color: var(--color-primary);
-                border-style: ridge;
+
+             /*   border: #493652 solid 1px; */
+
             }
             
             header {
+                display: flex;
                 padding: 1.5rem;
-                text-align: center;
+               
                 background-color: var(--color-secondary);
                 border-style: ridge;
             }
             footer {
-                display: inline-flex;
+                display: flex;
+                justify-content: center;
                 flex-direction: row;
                 background-color: var(--color-secondary);
                 border-style: ridge;
             }
-            ul {
-                flex-wrap: wrap;
-                display: inline-flex;
-                flex-direction: row;
-            }
-            ul li {
-                margin-right: 10vw;
-            }
+
             p {
                 color: var(--color-text);
                 font-size: .9em;
@@ -110,36 +104,91 @@
                 
             }
             .centerStage{
-                border-radius: var(--border-radius);
-                border-color: var(--color-trim);
-                border-style: dashed;
                 display: flex;
                 justify-content: center;
-            }
-
-            table  *{
+                text-align: center;
+            }   
+            table tr  {
                 border-color: var(--color-trim);
                 border-radius: var(--border-radius);
                 border-style: solid;
+
                 background-color: var(--color-ternary);
             }
-
-            #site-links{
-                
-            }
-            nav {
+            #numLang{
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
             }
-       
+            #iconFig{
+                width: 15vw;
+                margin-right: 4vw;
+            }
+            #site-links {
+                display: flex;
+                justify-content: space-around; 
+                gap: 8vw;
+                height: 2vh;
 
+            }
+            #site-links * {
+                height: 2vh;
+                border: blue solid 1px;
+            }
+
+            #likes  {
+               border: #c56af0 solid 1px;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               gap: 2vw;
+            }
+            #likes * {
+              /*  border: #493652 solid 1px; */
+
+            }
+            #videos{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 2vw;
+                border: #493652 solid 1px;
+                max-width: 50vw;
+            }
+            #videos > p {
+                width: 20ch;
+            }
+            #likes h3{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: whitesmoke;
+                font-size: 3rem;
+                font-style: oblique;
+            }
+            #novels{
+                border: #493652 solid 1px;
+                max-width: fit-content;
+            }
+
+
+            #audioStuff{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+    
+                border: #493652 solid 1px;
+                max-width: 50vw;
+            }
+
+            
+            #resume * {
+                display: flex;
+                justify-content: center;
+            }
 
             img,
             picture,
             video, table {
             max-width: 100%;
             }
-                  
             /* Responsive/Media Queries*/
             @media screen and (max-width: 640px) {
                 *{
@@ -156,8 +205,9 @@
     </head>
     <body>
         <header>
-            <img src="/content/images/logoLarge.svg" alt="Brendan Devlin's personal logo, designed and created by him.">
-             <!-- Fix these for all pages -->
+            <figure id="iconFig">
+                <img src="/content/images/logoLarge.svg" alt="Brendan Devlin's personal logo, designed and created by him."> 
+            </figure>
             <nav id="site-links">
                 <a href="/personal_demos/index.html"> Personal Demos </a>
                 <a href="/experiments/index.html"> Experiments </a>
@@ -179,7 +229,6 @@
                     <figcaption> Brendan Devlin </figcaption>
                 </figure>
             </div>
-
                 
             <section id="allAboutMe"> <!-- About me section with sub sections -->
                 <h2> About me: </h2>
@@ -202,7 +251,7 @@
                             <td> <strong> Java, C++, Python, Unix, JavaScript/HTML/CSS </strong> </td>
                             <td> <strong> Thoughtful and kind communicator whose diligent digging never leaves his teammates in a hole. </strong> </td>
                             <td> <b> I hope to become a very competent and real full stack developer. </b> </td>
-                            <td> <b> 7 </b> </td>
+                            <td id="numLang"> <b> 7 </b> </td>
                         </tr>
 
 
@@ -217,8 +266,9 @@
 
                 <section id="likes">
                     <h3> Likes and Cool Stuff </h3>
-                    <p> I like and enjoy much of popular television and movies today. I am also a <em> voracious reader. </em> </p>
-                    <div>
+                    
+                    <section id="novels">
+                        <p> I like and enjoy much of popular television and movies today. I am also a <em> voracious reader. </em> </p>
                         <p>My favorite novels are:</p>
                         <ol> 
                             <li> <i> Stranger in a Strange Land </i> </li>
@@ -226,18 +276,19 @@
                             <li> <i> Dune </i> </li>
                         </ol>
                         <aside> Did you know that Dune is being made into a big budget Movie? </aside>
-                    </div>
-                    
-                    <p> Here are some short clips from my favorite show. All Rights to NBC Universal </p>
-                    <video width="400" height="320" controls> 
-                        <source src="/content/video/frasierIfitsAnyComfort.mp4" > 
-                        Your Browser doesn't support the video tag
-                    </video>
-                    <video width="400" height="320" controls> 
-                        <source src="/content/video/cheersRueTheDay.mp4" > 
-                        Your Browser doesn't support the video tag
-                    </video>
-
+                    </section>
+                    <section id="videos">
+                        <p> Here are some short clips from my favorite show. All Rights to NBC Universal </p>
+                        <video width="400" height="320" controls> 
+                            <source src="/content/video/frasierIfitsAnyComfort.mp4" > 
+                            Your Browser doesn't support the video tag
+                        </video>
+                        <video width="400" height="320" controls> 
+                            <source src="/content/video/cheersRueTheDay.mp4" > 
+                            Your Browser doesn't support the video tag
+                        </video>
+                    </section>
+                    <section id="audioStuff">
                     <p> Here are some short audio clips from things I like. All Rights to Republic Records and Universal Music Group, NBC Universal, and The Walt Disney Company </p>
                     <p> "For once in my Life" by Stevie Wonder,  Chris Pratt as Andy Dwyer in <i>Parks and Recreation</i>, and Charlie Day as Charlie Kelly in <i>It's Always Sunny in Philadelphia</i> </p> <br>
                     <audio controls> 
@@ -252,9 +303,9 @@
                         <source src="/content/audio/helpMePlease.mp3" > 
                         Your Browser doesn't support the audio tag
                     </audio>
-                    <p> I think of the last audio clip often, whenever I am struggling! </p>
+                    <p> I think of the last audio clip often, whenever I am struggling! </p>                 
+                    </section>
                 </section>
-
                 <section id="resume" >
                     <h3> My Resume: </h3>
                     <span>
@@ -269,10 +320,7 @@
 
         </main>
 
-
         <footer>
-            <hr>
-            <br>
             <form action="https://httpbin.org/post" method="post"> <!-- Using fake action page for unimplemented functionality-->
                 <p> <b> Please enter your email address and I will email you back! </b>  </p> 
                 <label for="email-form" > Enter your email address: </label>
