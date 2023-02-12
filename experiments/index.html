@@ -31,8 +31,20 @@
                 background-color: var(--color-secondary);
                 border-style: ridge;
             }
+            section {
+                margin-bottom: var(--margin-size);
+
+                padding: var(--padding-size);
+                border-color: var(--color-ternary);
+                display: flex;
+                flex-direction: column;
+                background-color: var(--color-primary);
+
+            }
             * {
-                font-family: myCustomFont, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;   
+                font-family: myCustomFont, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;  
+                font-weight: 600;
+                border-radius: var(--border-radius); 
             }
             html{
                 background-color: var(--color-ternary);
@@ -50,6 +62,9 @@
             #site-links * {
                 height: 2vh;
                 border: blue solid 1px;
+            }
+            header h1 {
+                margin-right: 8vw;
             }
 
         </style>

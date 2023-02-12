@@ -37,7 +37,6 @@
                 background-color: var(--color-ternary);
 
             }
-
             section {
                 margin-bottom: var(--margin-size);
 
@@ -46,8 +45,6 @@
                 display: flex;
                 flex-direction: column;
                 background-color: var(--color-primary);
-
-             /*   border: #493652 solid 1px; */
 
             }
             
@@ -127,7 +124,7 @@
                 border-color: var(--color-trim);
                 border-radius: var(--border-radius);
                 border-style: solid;
-
+                text-align: center;
                 background-color: var(--color-ternary);
             }
             #numLang{
@@ -135,23 +132,15 @@
                 justify-content: center;
             }
             #iconFig{
-                width: 15vw;
-                margin-right: 4vw;
+                max-width: 10vw;
+               
                 
             }
             #site-links {
                 display: flex;
-                justify-content: space-around; 
+                justify-content: space-evenly; 
                 gap: 8vw;
                 height: 2vh;
-            }
-            
-            #site-links * {
-                height: 2vh;
-                border: blue solid 1px;
-                background-color: var(--color-dark-trim);
-                text-decoration: none;
-                padding: 1px;
             }
 
             #likes  {
@@ -168,14 +157,7 @@
                 gap: 3vw;
                 max-width: 75vw;
             }
-            aside{
-                animation-name: sidleUp;
-                animation-delay: 10s;
-                animation-duration: 4s;
-            }
-            #videos > p {
-                
-            }
+
             #likes h3{
                 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 color: whitesmoke;
@@ -206,28 +188,66 @@
                 display: flex;
                 justify-content: center;
             }
+            
+            [src="/content/images/myHamburger.svg"] {
+                visibility: hidden;
+            }
+
+ 
+            
+            #site-links > * + * {
+            /*    height: 2vh;
+                background-color: var(--color-dark-trim);
+                text-decoration: none;
+                padding: 1px;*/
+                visibility: visible;
+
+            }
 
             img,
             picture,
             video, table {
-            max-width: 100%;
+            max-width: 100vw;
             }
             /* Responsive/Media Queries*/
-            @media screen and (max-width: 640px) {
+            @media screen and (max-width: 685px) {
                 *{
-                    background-color:var(--color-ternary);
-                    
+                    background-color: var(--color-secondary);
                 }
                 #likes h3{
                     color: var(--color-dark-trim);
          
                 }
-
-            }
-            @media screen and (min-width: 641px) and (max-width: 1023px) {
-                *{
-                    background-color: rgb(212, 197, 228);
+                 #site-links:first-child {
+                    visibility: visible;
                 }
+
+                #site-links > * + * {
+                    visibility: hidden;
+                }
+                #iconFig{
+                     visibility: hidden;
+                }
+                [src="/content/images/myHamburger.svg"] {
+                     visibility: visible;
+                }
+            }
+            @media screen and (min-width: 686px) and (max-width: 1023px) {
+                *{
+                    background-color: var(--color-secondary);
+                }
+                #iconFig{
+                    visibility: hidden;
+                }
+           /*     [src="/content/images/myHamburger.svg"] {
+                     visibility: visible;
+                }
+                #site-links > * + * {
+                    visibility: hidden;
+                }
+                #iconFig{
+                     visibility: hidden;
+                }*/
             }
         </style>
     </head>
@@ -237,6 +257,8 @@
                 <img src="/content/images/logoLarge.svg" alt="Brendan Devlin's personal logo, designed and created by him."> 
             </figure>
             <nav id="site-links">
+                <img src="/content/images/myHamburger.svg" alt="a hamburger menu icon, to see site navigation when the window is smaller, like on a mobile phone or tablet." width="65px" height="65px" />
+                <a href="/content/images/myHamburger.svg"></a>
                 <a href="/personal_demos/index.html"> Personal Demos </a>
                 <a href="/experiments/index.html"> Experiments </a>
                 <a href="https://www.linkedin.com/in/brendan-devlin-7846a7252/"> My LinkedIn </a>
