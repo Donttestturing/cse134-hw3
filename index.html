@@ -93,9 +93,6 @@
                 
                 
             }
-            #allAboutMe{
-               
-            }
             #joke {
                 border-radius: var(--border-radius);
                 border-color: var(--color-trim);
@@ -178,10 +175,6 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-    
-                border: #493652 solid 1px;
-
-                
             }
             
             #resume * {
@@ -249,14 +242,16 @@
                 }
                 
                 /* Hide table headers (but not display: none;, for accessibility) */
-                thead tr { 
+                #tableHeaders { 
                     position: absolute;
                     top: -9999px;
                     left: -9999px;
+
                 }
-                
-                tr { border: 1px solid #ccc; }
-                
+                #career-skills-goals caption{
+                    width: 40vw;
+                    margin-left: 50vw;
+                }
                 td { 
                     /* Behave  like a "row" */
                     border: none;
@@ -274,12 +269,7 @@
                     padding-right: 10px; 
                     white-space: nowrap;
                 }
-                table caption *{
-                    text-align: center;
-                }
-                #tableHeaders{
-                    visibility: hidden;
-                }
+     
                 /* striping */
                 td:nth-of-type(odd), td:nth-of-type(odd) * { 
                     background-color: var(--color-trim); 
