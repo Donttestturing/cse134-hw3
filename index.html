@@ -191,7 +191,7 @@
 
             }
 
-            img,
+            /* img, */
             picture,
             video, table {
             max-width: 100vw;
@@ -234,7 +234,8 @@
                 }
                 
             }
-            @media screen and (max-width: 1023px) {
+            /* table responsive stuff */
+            @media screen and (max-width: 1023px) { 
                 /* helped heavily from https://css-tricks.com/responsive-data-tables/ */
                 /* Force table to not be like tables anymore */
                 table, thead, tbody, th, td, tr { 
@@ -308,14 +309,14 @@
                 </details>
             </div>
             <div class="centerStage">
-                <figure>
+                <!--  <figure> -->
                      <picture>
-                        <source srcset="/content/images/Photo_of_me.jpg" media="min-width: 1023px" alt="Photo of Brendan Devlin from mid chest height and above" >
-                        <source srcset="/content/images/Photo_of_me_tablet_size.jpg" media="max-width: 1022px" alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
+                        <source src="/content/images/Photo_of_me.jpg" media="min-width: 1023px" alt="Photo of Brendan Devlin from mid chest height and above" >
+                        <source src="/content/images/Photo_of_me_tablet_size.jpg" media="max-width: 1022px and min-width:641px" alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
                         <img src="/content/images/Photo_of_me_mobile_size.jpg" alt="Photo of Brendan Devlin from mid chest height and above, mobile size" >
                      </picture>
-                     <figcaption> Brendan Devlin </figcaption>
-                </figure>
+             <!--       <figcaption> Brendan Devlin </figcaption>
+                </figure>--> 
             </div>
             <section id="allAboutMe"> <!-- About me section with sub sections -->
                 <h2> About me: </h2>
