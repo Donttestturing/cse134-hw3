@@ -120,6 +120,10 @@
                 justify-content: center;
                 text-align: center;
             }   
+            tr:nth-of-type(odd) { 
+                background: var(--color-trim); 
+            }
+  
             table tr  {
                 border-color: var(--color-trim);
                 border-radius: var(--border-radius);
@@ -247,6 +251,55 @@
                 }
                 
             }
+            @media screen and (max-width: 1023px) {
+                /* Force table to not be like tables anymore */
+                table, thead, tbody, th, td, tr { 
+                    display: block; 
+                }
+                
+                /* Hide table headers (but not display: none;, for accessibility) */
+                thead tr { 
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+                
+                tr { border: 1px solid #ccc; }
+                
+                td { 
+                    /* Behave  like a "row" */
+                    border: none;
+                    border-bottom: 1px solid #eee; 
+                    position: relative;
+                    padding-left: 50%; 
+                }
+                td:before { 
+                    /* Now like a table header */
+                    position: absolute;
+                    /* Top/left values mimic padding */
+                    top: 6px;
+                    left: 6px;
+                    width: 45%; 
+                    padding-right: 10px; 
+                    white-space: nowrap;
+                }
+                table caption{
+                    text-align: center;
+                }
+                #tableHeaders{
+                    visibility: hidden;
+                }
+                
+                /*
+                Label the data
+                */
+                td:nth-of-type(1):before { content: "Me"; }
+                td:nth-of-type(2):before { content: "Technical Skills"; }
+                td:nth-of-type(3):before { content: "Interpersonal Skills "; }
+                td:nth-of-type(4):before { content: "Goals"; }
+                td:nth-of-type(5):before { content: "Number of languages learned"; }
+            
+            }
         </style>
     </head>
     <body>
@@ -289,7 +342,7 @@
                         <colgroup>
                             <col span="5"> 
                         </colgroup>
-                        <tr> 
+                        <tr id="tableHeaders"> 
                             <th> Me </th>
                             <th> Technical Skills </th>
                             <th> Interpersonal Skills </th>
