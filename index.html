@@ -274,13 +274,16 @@
                     padding-right: 10px; 
                     white-space: nowrap;
                 }
-                table caption{
+                table caption *{
                     text-align: center;
                 }
                 #tableHeaders{
                     visibility: hidden;
                 }
-                
+                /* striping */
+                td:nth-of-type(odd), td:nth-of-type(odd) * { 
+                    background-color: var(--color-trim); 
+                }
                 /*
                 Label the data
                 */
@@ -318,7 +321,7 @@
                 <figure>
                      <picture>
                         <source srcset="/content/images/Photo_of_me.jpg" media="min-width: 1023px" alt="Photo of Brendan Devlin from mid chest height and above" >
-                        <source srcset="/content/images/Photo_of_me_tablet_size.jpg" media="min-width: 640px" alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
+                        <source srcset="/content/images/Photo_of_me_tablet_size.jpg" media="max-width: 1022px" alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
                         <img src="/content/images/Photo_of_me_mobile_size.jpg" alt="Photo of Brendan Devlin from mid chest height and above, mobile size" >
                      </picture>
                      <figcaption> Brendan Devlin </figcaption>
@@ -410,7 +413,6 @@
                 </section>
 
             </section>
-
 
         </main>
 
