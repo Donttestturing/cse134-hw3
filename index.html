@@ -155,10 +155,8 @@
                gap: 2vw;
             }
             #videos{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 3vw;
+                display: block;
+  
                 max-width: 75vw;
             }
 
@@ -176,7 +174,6 @@
                 background-color: var(--color-ternary);
             }
 
-
             #audioStuff{
                 display: flex;
                 flex-direction: row;
@@ -186,7 +183,6 @@
 
                 
             }
-
             
             #resume * {
                 display: flex;
@@ -196,14 +192,8 @@
             [src="/content/images/myHamburger.svg"] {
                 visibility: hidden;
             }
-
- 
             
             #site-links > * + * {
-            /*    height: 2vh;
-                background-color: var(--color-dark-trim);
-                text-decoration: none;
-                padding: 1px;*/
                 visibility: visible;
 
             }
@@ -252,6 +242,7 @@
                 
             }
             @media screen and (max-width: 1023px) {
+                /* helped heavily from https://css-tricks.com/responsive-data-tables/ */
                 /* Force table to not be like tables anymore */
                 table, thead, tbody, th, td, tr { 
                     display: block; 
@@ -382,11 +373,11 @@
                     </section>
                     <section id="videos">
                         <p> Here are some short clips from my favorite show. All Rights to NBC Universal </p>
-                        <video width="400" height="320" controls> 
+                        <video width="400px" height="320px" controls> 
                             <source src="/content/video/frasierIfitsAnyComfort.mp4" > 
                             Your Browser doesn't support the video tag
                         </video>
-                        <video width="400" height="320" controls> 
+                        <video width="400px" height="320px" controls> 
                             <source src="/content/video/cheersRueTheDay.mp4" > 
                             Your Browser doesn't support the video tag
                         </video>
