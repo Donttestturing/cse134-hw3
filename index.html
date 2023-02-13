@@ -210,7 +210,7 @@
             max-width: 100vw;
             }
             /* Responsive/Media Queries*/
-            @media screen and (max-width: 685px) {
+            @media screen and (max-width: 640px) {
                 *{
                     background-color: var(--color-secondary);
                 }
@@ -232,22 +232,20 @@
                      visibility: visible;
                 }
             }
-            @media screen and (min-width: 686px) and (max-width: 1023px) {
+            @media screen and (min-width: 641px) and (max-width: 1023px) {
                 *{
                     background-color: var(--color-secondary);
                 }
                 #iconFig{
                     visibility: hidden;
                 }
-           /*     [src="/content/images/myHamburger.svg"] {
+                [src="/content/images/myHamburger.svg"] {
                      visibility: visible;
-                }
+               }
                 #site-links > * + * {
                     visibility: hidden;
                 }
-                #iconFig{
-                     visibility: hidden;
-                }*/
+                
             }
         </style>
     </head>
@@ -273,9 +271,13 @@
                 </details>
             </div>
             <div class="centerStage">
-                <figure> 
-                    <img src="/content/images/Photo_of_me.jpg" alt="Photo of Brendan Devlin from mid chest height and above">
-                    <figcaption> Brendan Devlin </figcaption>
+                <figure>
+                     <picture>
+                        <source srcset="/content/images/Photo_of_me.jpg" media="min-width: 1023px" alt="Photo of Brendan Devlin from mid chest height and above" >
+                        <source srcset="/content/images/Photo_of_me_tablet_size.jpg" media="min-width: 640px" alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
+                        <img src="/content/images/Photo_of_me_mobile_size.jpg" alt="Photo of Brendan Devlin from mid chest height and above, mobile size" >
+                     </picture>
+                     <figcaption> Brendan Devlin </figcaption>
                 </figure>
             </div>
                 
