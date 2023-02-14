@@ -53,12 +53,14 @@
                 border-style: ridge;
             }
             footer {
-                display: flex;
-                justify-content: center;
-                flex-direction: row;
+                display:flex;
                 background-color: var(--color-secondary);
                 border-style: ridge;
-                min-width: 85vw
+                margin-left: 32px;
+            }
+            
+            form {
+                padding: 10px;
             }
 
             p {
@@ -238,11 +240,7 @@
                 [src="/content/images/myHamburger.svg"] {
                      visibility: visible;
                 }
-                               
-                header{
-                    width: 190vw;
-                    height: 28vw;
-                }
+    
             }
             @media screen and (min-width: 641px) and (max-width: 1023px) {
                 h1, h2, h3{
@@ -258,11 +256,7 @@
                 #site-links > * + * {
                     visibility: hidden;
                 }
-                               
-                header{
-                    width: 159vw;
-                    height: 28vw;
-                }
+
             }
             /* table responsive stuff */
             @media screen and (max-width: 1023px) { 
@@ -314,7 +308,11 @@
                 td:nth-of-type(4):before { content: "Goals"; }
                 td:nth-of-type(5):before { content: "Number of languages learned"; }
 
-            
+                                               
+                header, footer{
+                    width: 159vw;
+                    height: 28vw;
+                }
             }
         </style>
     </head>
