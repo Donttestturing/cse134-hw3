@@ -170,18 +170,28 @@
                color: var(--color-trim)
             }
             #novels{
-                border:var(--color-trim) 1px;
+                border:var(--color-trim) 3px;
                 border-style: groove;
                 max-width: 35ch;
                 background-color: var(--color-ternary);
                 transform: rotate(3deg);
 
-                transition: border-radius 1.5s, background-color 2s;
+                transition: border-radius 1.5s, background-color 2s, font-weight 2s;
                 transition-delay: 1s;
             }
-            #novels:hover{
+            #novels, p, p em {
+                font-weight: 700;
+            }
+            #novels:hover {
                 background-color:rgba(224, 204, 111, .65);
-                border-radius: 40px;
+                border-radius: 40px;        
+                font-weight: 700;
+            }
+            #novels:hover li ,#novels:hover li i {
+                font-weight: 550;
+            }
+            #novels:hover aside {
+                font-weight: 675;
             }
 
             #audioStuff{
@@ -390,7 +400,7 @@
                             <li> <i> The Song of Ice and Fire Series </i> </li>
                             <li> <i> A Time to Kill </i> </li>
                             <li> <i> The Giver </i> </li>
-                            <li> <i> Prey </i> by Michael Crichton </li>
+                            <li> <i> Prey </i> </li>
                             <li> <i> Things Fall Apart </i> </li>
                             <li> <i> Frankenstein; or, The Modern Prometheus </i> </li>
                             <li> <i> Dune </i> </li>
