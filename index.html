@@ -49,8 +49,6 @@
             
             header {
                 display: flex;
-                padding: 1.5rem;
-               
                 background-color: var(--color-secondary);
                 border-style: ridge;
             }
@@ -110,6 +108,9 @@
                 justify-content: center;
                 text-align: center;
             }   
+            #resume {
+                border-top: 2px groove var(--color-trim);
+            }
             #resume * {
                 display: flex;
                 justify-content: center;
@@ -143,7 +144,6 @@
             }
 
             #likes  {
-               border: #c56af0 solid 1px;
                display: flex;
                flex-direction: row;
                flex-wrap: wrap;
@@ -196,10 +196,11 @@
             }
 
 
+
             img, 
             picture,
             video, table {
-            max-width: 100vw;
+                max-width: 100vw;
             }
             /* Responsive/Media Queries*/
             @media screen and (max-width: 640px) {
@@ -223,6 +224,11 @@
                 [src="/content/images/myHamburger.svg"] {
                      visibility: visible;
                 }
+                               
+                header{
+                    width: 190vw;
+                    height: 28vw;
+                }
             }
             @media screen and (min-width: 641px) and (max-width: 1023px) {
                 h1, h2, h3{
@@ -238,7 +244,11 @@
                 #site-links > * + * {
                     visibility: hidden;
                 }
-                
+                               
+                header{
+                    width: 159vw;
+                    height: 28vw;
+                }
             }
             /* table responsive stuff */
             @media screen and (max-width: 1023px) { 
@@ -289,6 +299,7 @@
                 td:nth-of-type(3):before { content: "Interpersonal Skills "; }
                 td:nth-of-type(4):before { content: "Goals"; }
                 td:nth-of-type(5):before { content: "Number of languages learned"; }
+
             
             }
         </style>
