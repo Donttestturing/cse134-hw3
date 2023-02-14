@@ -159,7 +159,6 @@
                 font-size: 3rem;
                 font-style: oblique;
                 margin-right: 27vw;
-/*25345465346g */
                 transition: background-color 2s;
             }
             #likes h3:hover {
@@ -314,7 +313,7 @@
             <div class="centerStage">
                   <figure> 
                      <picture>
-                        <source srcset="/content/images/Photo_of_me.jpg" media="screen and (min-width: 1024px)" alt="Photo of Brendan Devlin from mid chest height and above" >
+                        <source srcset="/content/images/Photo_of_me.webp" media="screen and (min-width: 1024px)" alt="Photo of Brendan Devlin from mid chest height and above" >
                         <source srcset="/content/images/Photo_of_me_tablet_size.jpg" media="screen and (min-width: 641px) and (max-width: 1023px)" alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
                         <img src="/content/images/Photo_of_me_mobile_size.jpg" alt="Photo of Brendan Devlin from mid chest height and above, mobile size" >
                      </picture>
@@ -338,7 +337,15 @@
                             <th> Number of languages learned </th>
                         </tr>
                         <tr>
-                            <td> <img src="/content/images/Photo_of_me_small.jpg" alt="Smaller Photo of Brendan Devlin from mid chest height and above"> </td>
+                            <td> 
+                                <picture>
+                                    <source srcset="/content/images/Photo_of_me_mobile_size.webp" media="screen and (min-width: 1024px)"  >
+                                    <source srcset="/content/images/Photo_of_me_small_tablet_size.webp" media="screen and (min-width: 641px) and (max-width: 1023px)"  alt="Smaller Photo of Brendan Devlin from mid chest height and above, tablet size">
+                                    <img src="/content/images/Photo_of_me_small_mobile_size.webp" alt="Smaller Photo of Brendan Devlin from mid chest height and above, mobile size"> 
+                                </picture>
+             
+                            
+                            </td>
                             <td> <strong> Java, C++, Python, Unix, JavaScript/HTML/CSS </strong> </td>
                             <td> <strong> Thoughtful and kind communicator whose diligent digging never leaves his teammates in a hole. </strong> </td>
                             <td> <b> I hope to become a very competent and real full stack developer. </b> </td>
@@ -401,7 +408,9 @@
                     <h3> My Resume: </h3>
                     <span>
                         <picture id="my_resume">
-                            <img src="/content/images/Brendan_Devlins_Resume.jpg" alt="An image of Brendan Devlin's Resume, listing education, skills, and other pertinent details" loading="lazy">
+                            <source srcset="/content/images/Brendan_Devlins_Resume.jpg" alt="An image of Brendan Devlin's Resume, listing education, skills, and other pertinent details" media="screen and (min-width: 1024px)" loading="lazy">
+                            <source srcset="/content/images/Brendan_Devlins_Resume_tablet_size.jpg" alt="An image of Brendan Devlin's Resume, listing education, skills, and other pertinent details" media="screen and (min-width: 641px) and (max-width: 1023px)" loading="lazy">
+                            <img src="/content/images/Brendan_Devlins_Resume_mobile_size.jpg"  alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
                         </picture>
                     </span>
                 </section>
