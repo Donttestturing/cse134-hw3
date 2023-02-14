@@ -93,7 +93,6 @@
             #joke {
                 font-size: 2em;
             }
-
             @keyframes sidleUp {
                 from {
                     margin-bottom: 100%;
@@ -111,7 +110,7 @@
                 display: flex;
                 justify-content: center;
                 text-align: center;
-            }   
+            }   iconFig
             tr:nth-of-type(odd) { 
                 background: var(--color-trim); 
             }
@@ -131,7 +130,6 @@
                 max-width: 10vw;
                 
             }
-            
             #site-links {
                 display: flex;
                 justify-content: space-evenly; 
@@ -146,10 +144,8 @@
                flex-wrap: wrap;
                gap: 2vw;
             }
-
             #videos{
                 display: block;
-  
                 max-width: 75vw;
             }
 
@@ -170,6 +166,15 @@
                 border-style: groove;
                 max-width: 35ch;
                 background-color: var(--color-ternary);
+                transform: rotate(3deg);
+
+                transition: transform 1s, width 3s;       
+                transition-delay: 4s;
+
+            }
+            #novels:hover{
+                rotate: -3deg;
+
             }
 
             #audioStuff{
@@ -190,6 +195,9 @@
             #site-links > * + * {
                 visibility: visible;
 
+            }
+            figcaption {
+                font-size: small;
             }
 
             img, 
@@ -293,6 +301,7 @@
         <header>
             <figure id="iconFig">
                 <img src="/content/images/logoLarge.svg" alt="Brendan Devlin's personal logo, designed and created by him."> 
+                <figcaption> Brendan Devlin's personal logo </figcaption>
             </figure>
             <nav id="site-links">
                 <img src="/content/images/myHamburger.svg" alt="a hamburger menu icon, to see site navigation when the window is smaller, like on a mobile phone or tablet." width="65px" height="65px" />
@@ -314,8 +323,8 @@
                   <figure> 
                      <picture>
                         <source srcset="/content/images/Photo_of_me.webp" media="screen and (min-width: 1024px)" alt="Photo of Brendan Devlin from mid chest height and above" >
-                        <source srcset="/content/images/Photo_of_me_tablet_size.jpg" media="screen and (min-width: 641px) and (max-width: 1023px)" alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
-                        <img src="/content/images/Photo_of_me_mobile_size.jpg" alt="Photo of Brendan Devlin from mid chest height and above, mobile size" >
+                        <source srcset="/content/images/Photo_of_me_tablet_size.webp" media="screen and (min-width: 641px) and (max-width: 1023px)" alt="Photo of Brendan Devlin from mid chest height and above, tablet size" >
+                        <img src="/content/images/Photo_of_me_mobile_size.webp" alt="Photo of Brendan Devlin from mid chest height and above, mobile size" >
                      </picture>
                     <figcaption> Brendan Devlin </figcaption>
                 </figure>
@@ -343,16 +352,12 @@
                                     <source srcset="/content/images/Photo_of_me_small_tablet_size.webp" media="screen and (min-width: 641px) and (max-width: 1023px)"  alt="Smaller Photo of Brendan Devlin from mid chest height and above, tablet size">
                                     <img src="/content/images/Photo_of_me_small_mobile_size.webp" alt="Smaller Photo of Brendan Devlin from mid chest height and above, mobile size"> 
                                 </picture>
-             
-                            
                             </td>
                             <td> <strong> Java, C++, Python, Unix, JavaScript/HTML/CSS </strong> </td>
                             <td> <strong> Thoughtful and kind communicator whose diligent digging never leaves his teammates in a hole. </strong> </td>
                             <td> <b> I hope to become a very competent and real full stack developer. </b> </td>
                             <td id="numLang"> <b> 7 </b> </td>
                         </tr>
-
-
                     </table>
 
                     <br>
